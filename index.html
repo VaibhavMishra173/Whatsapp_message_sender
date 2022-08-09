@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="./style.css" rel="stylesheet"> -->
+    <title>WhatsApp message Sender</title>
+    <style>
+        body {
+            background-image: url('logo.svg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-size: 100% 100%;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+        }
+        #countryCode {
+            width: 40px;
+            height: 30px;
+            font-size: 25px;
+            margin-right: -9.6px;
+            border-radius: 6px;
+            background-color: #115e07;
+            border: 2px solid #075E54;
+            color: white;
+            outline: none;
+        }
+        #contact {
+            outline: none;
+            width: 140px;
+            height: 30px;
+            font-size: 25px;
+            border-radius: 8px;
+            color: #778a88;
+            border: 2px solid #075E54;
+            border-left: none;
+        }
+        #button {
+            width: 75px;
+            height: 36px;
+            font-size: 25px;
+            margin-left: -10px;
+            border-radius: 10px;
+            background-color: #1a5e07;
+            border: none;
+            color: rgb(255, 255, 255);
+        }
+        p {
+            color: #000000ee;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1><u> WhatsApp</u></h1>
+    <h4>Send message without saving senders number</h3>
+        <div style="padding-top: 15vh !important">
+            <input type="tel" name="CountyCode" value="+91" maxlength="3" id="countryCode">
+            <input type="tel" name="contact" maxlength="10" id="contact">
+            <input type="button" id="button" value="Send" onclick="redirectTo()">
+            <p><strong>Enter reciever's What's App Number</p>
+        </div>
+        <script>
+            function redirectTo() {
+                let contact = document.getElementById('contact');
+                let countryCode = document.getElementById('countryCode');
+                location.replace('https://wa.me/' + countryCode.value + contact.value);
+            }
+        </script>
+</body>
+
+</html>
